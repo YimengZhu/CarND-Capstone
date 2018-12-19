@@ -21,7 +21,7 @@ class Controller(object):
         self.throttle_controller = PID(kp,ki,kd,mn,mx)
 
         tau = 0.5
-        ts = .02
+        ts = .2
         self.vel_lpf = LowPassFilter(tau, ts)
 
         self.vehicle_mass = vehicle_mass
