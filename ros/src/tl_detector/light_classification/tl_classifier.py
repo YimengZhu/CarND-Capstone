@@ -55,8 +55,8 @@ class TLClassifier(object):
 
         probility = np.squeeze(predict[1])
         predicted_classes = np.squeeze(predict[2]).astype(np.int32)
-
-        if probility[0] > .7:
+        
+        if probility[0] > .6:
             if predicted_classes[0] == 1:
                 return TrafficLight.GREEN
 
